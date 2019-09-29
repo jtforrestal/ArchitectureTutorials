@@ -8,47 +8,49 @@ public		g
 g			DWORD	4
 .code
 
+min2:		push	ebp
+			mov		ebp,esp
+			mov		eax, [ebp+8]
+			mov		ebx, [ebp+12]
+			cmp		eax, ebx
+			jle		min2_reta
+			mov		eax,ebx
+min2_reta:	mov		esp, ebp
+			pop		ebp
+			ret		0
+
 public		min
 
 min:		push	ebp
 			mov		ebp, esp
-			mov		eax, [ebp+8]
-			mov		ebx, [ebp+12]
-			cmp		eax, ebx		;if(eax < = ebx)
-			jle		min_alessb
-			mov		eax, [ebp+12]
-			mov		ebx, [ebp+16]
-			jmp		min_fin
-
-min_alessb:	mov		ebx, [ebp+16]
-			mov		eax, [ebp+8]
-			
-min_fin:	cmp		eax, ebx
-			jle		min_reta
-
-min_retb:	mov		eax, ebx
-		
-min_reta:	mov		esp, ebp
+			push	[ebp+8]
+			push	[ebp+12]
+			call	min2
+			push	[ebp+16]
+			push	eax
+			call	min2
+			mov		esp, ebp
 			pop		ebp
 			ret		0
 
 public		p
 
 p:			push	ebp
-			mov		ebp, esp
-;;			mov		eax, [ebp+16]	Debugging 
+			mov		ebp, esp	
+			sub		esp,8
 
 			push	[g]
 			push	[ebp+8]
+			call	min2
+			push	eax
 			push	[ebp+12]
-			call	min
+			call	min2
 			push	eax
 			push	[ebp+16]
+			call	min2
+			push	eax
 			push	[ebp+20]
-			call	min
-
-
-
+			call	min2
 			mov		esp, ebp
 			pop		ebp
 
