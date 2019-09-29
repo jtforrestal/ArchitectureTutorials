@@ -152,7 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="G:\My Drive\Final Year\Architecure\T_1\fib32.h" />
+    <ClInclude Include="fib32.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="T1.h" />
   </ItemGroup>

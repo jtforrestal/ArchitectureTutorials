@@ -18,10 +18,10 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="G:\My Drive\Final Year\Architecure\T_1\fib32.h">
+    <ClInclude Include="T1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="T1.h">
+    <ClInclude Include="fib32.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
