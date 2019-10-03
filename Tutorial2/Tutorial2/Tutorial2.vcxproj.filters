@@ -31,15 +31,15 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="G:\My Drive\Final Year\Architecure\T2\fib64.asm">
-      <Filter>Source Files</Filter>
-    </Text>
     <Text Include="G:\My Drive\Final Year\Architecure\T2\fib64.h">
       <Filter>Header Files</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>
     <MASM Include="t2.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
+    <MASM Include="G:\My Drive\Final Year\Architecure\T2\fib64.asm">
       <Filter>Source Files</Filter>
     </MASM>
   </ItemGroup>
