@@ -152,6 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="fib64.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="t2.h" />
   </ItemGroup>
@@ -169,7 +170,6 @@
       <FileType>Document</FileType>
     </MASM>
     <MASM Include="t2.asm" />
-    <Text Include="G:\My Drive\Final Year\Architecure\T2\fib64.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

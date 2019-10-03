@@ -1,10 +1,17 @@
+
+
 option casemap:none
+includelib	legacy_stdio_definitions.lib
+extrn	printf:near
 .data
 public	g
 g		QWORD	4
 
 qxp		db	'"a = %I64d b = %I64d c = %I64d d = %I64d e = %I64d sum = %I64d', 0AH,00H
+
 .code
+
+
 
 public	minX64
 
@@ -26,11 +33,11 @@ pX64:	push	r9	;store our inputs k and l
 
 		mov		r8,rdx	;move our original parameters into appropriate registers for min call
 		mov		rdx,rcx
-		mov		rcx,#g
+		mov		rcx,g
 
 		sub		rsp,32	;allocate 32 bits of sadow space
 
-		call	min
+		call	minX64
 
 		add		rsp,32	;temporarily deallocating shadow space to retrieve k and l
 		mov		rcx,rax
@@ -39,7 +46,7 @@ pX64:	push	r9	;store our inputs k and l
 
 		sub		rsp,32	;alloc
 
-		call	min
+		call	minX64
 
 		add		rsp,32	;dalloc
 		ret				;min call returns result to rax anyways so we can return again
