@@ -40,5 +40,8 @@
     <MASM Include="G:\My Drive\Final Year\Architecure\T2\fib64.asm">
       <Filter>Source Files</Filter>
     </MASM>
+    <MASM Include="qns.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
 </Project>

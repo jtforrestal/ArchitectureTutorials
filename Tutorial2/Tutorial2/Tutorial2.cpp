@@ -88,7 +88,8 @@ int main(int argc, char* argv[]) {
 	check((char*)"qX64(1, 2, 3, 4, 5)", qX64(1, 2, 3, 4, 5), 15);
 	check((char*)"qX64(-1, 2, -3, 4, -5)", qX64(-1, 2, -3, 4, -5), -3);
 
-	//check("qns()", qns(), 0);
+	check((char*)"qnsShadowSpace()", qnsShadowSpace(), 0);
+	//check((char*)"qnsNoSpace()", qnsNoSpace(), 0);
 
 	cout << endl;
 

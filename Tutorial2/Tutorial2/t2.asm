@@ -9,6 +9,8 @@ g		QWORD	4
 
 qxp		db	'"a = %I64d b = %I64d c = %I64d d = %I64d e = %I64d sum = %I64d', 0AH,00H
 
+
+
 .code
 
 
@@ -91,4 +93,6 @@ qX64:
 		add		rsp,56			;de allocating the shadow space
 
 		ret
+
+
 		end
